@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"broken","Sat Oct 08 18:24:50 GMT+03:00 2022","Sat Oct 08 18:24:50 GMT+03:00 2022","17","","ru.ibs.test.CucumberRunner","","ru.ibs.test.CucumberRunner","initializationError","initializationError",""

@@ -1,0 +1,26 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "DESKTOP-S2PAEH9",
+    "children" : [ {
+      "name" : "13148@DESKTOP-S2PAEH9.main(1)",
+      "children" : [ {
+        "name" : "initializationError",
+        "uid" : "abf5fc7db6d79075",
+        "parentUid" : "ff0a7a2021ba0d112131c862771a2ce3",
+        "status" : "broken",
+        "time" : {
+          "start" : 1665242690435,
+          "stop" : 1665242690452,
+          "duration" : 17
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ff0a7a2021ba0d112131c862771a2ce3"
+    } ],
+    "uid" : "7f362bc043acf266bbc4882e22b624cc"
+  } ]
+}

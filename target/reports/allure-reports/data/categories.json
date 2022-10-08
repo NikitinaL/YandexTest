@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "Failed to parse resource at: file:///C:/Users/User/IdeaProjects/YandexTest/src/test/resources/scenario/cucumber.feature\n(6:3): expected: #TagLine, #RuleLine, #Comment, #Empty, got 'Сценарий 1: Поиск ТВ с заданным диапазоном цены от 20000 и производителем LG/Samsung'\n(7:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got '* Перейти в раздел Электроника'\n(8:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got '* Выбрать раздел Телевизоры'\n(9:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got '* Расширенный поиск'\n(10:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got '* Задать параметры поиска для TV: диапазон цен и производитель'\n(12:3): expected: #TagLine, #RuleLine, #Comment, #Empty, got 'org.example'\n(14:0): unexpected end of file, expected: #TagLine, #RuleLine, #Comment, #Empty",
+      "children" : [ {
+        "name" : "initializationError",
+        "uid" : "abf5fc7db6d79075",
+        "parentUid" : "95383e806c7cb82ca72799921886738f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1665242690435,
+          "stop" : 1665242690452,
+          "duration" : 17
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "95383e806c7cb82ca72799921886738f"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
+}

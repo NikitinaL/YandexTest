@@ -1,0 +1,5 @@
+#folders ignore
+.idea
+.pom
+
+#files ignore

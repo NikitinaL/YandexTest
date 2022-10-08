@@ -1,0 +1,12 @@
+ru\ibs\framework\pages\StartPage.class
+Steps\StartPageStep.class
+ru\ibs\framework\pages\SearchPage.class
+managers\PageManager.class
+ru\ibs\framework\pages\ElectronicaPage.class
+ru\ibs\framework\pages\TvPage.class
+Steps\SearchPageStep.class
+Steps\TvPageStep.class
+managers\DriverManager.class
+Steps\ElectronicaPageStep.class
+managers\TestPropManager.class
+ru\ibs\framework\pages\BasePage.class

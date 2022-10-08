@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: ru.ibs.test.CucumberRunner
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.039 s <<< FAILURE! - in ru.ibs.test.CucumberRunner
+ru.ibs.test.CucumberRunner.initializationError  Time elapsed: 0.347 s  <<< ERROR!
+io.cucumber.core.gherkin.FeatureParserException: 
+Failed to parse resource at: file:///C:/Users/User/IdeaProjects/YandexTest/src/test/resources/scenario/cucumber.feature
+(6:3): expected: #TagLine, #RuleLine, #Comment, #Empty, got 'Сценарий 1: Поиск ТВ с заданным диапазоном цены от 20000 и производителем LG/Samsung'
+(7:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got '* Перейти в раздел Электроника'
+(8:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got '* Выбрать раздел Телевизоры'
+(9:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got '* Расширенный поиск'
+(10:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got '* Задать параметры поиска для TV: диапазон цен и производитель'
+(12:3): expected: #TagLine, #RuleLine, #Comment, #Empty, got 'org.example'
+(14:0): unexpected end of file, expected: #TagLine, #RuleLine, #Comment, #Empty
+

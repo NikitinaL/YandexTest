@@ -1,0 +1,22 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "ru.ibs.test",
+    "children" : [ {
+      "name" : "initializationError",
+      "uid" : "abf5fc7db6d79075",
+      "parentUid" : "0b85aad7430aadab5b656d78075c13c8",
+      "status" : "broken",
+      "time" : {
+        "start" : 1665242690435,
+        "stop" : 1665242690452,
+        "duration" : 17
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "ru.ibs.test"
+  } ]
+}
