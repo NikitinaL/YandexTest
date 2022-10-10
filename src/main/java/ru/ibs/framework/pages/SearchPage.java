@@ -6,20 +6,20 @@ import org.openqa.selenium.support.PageFactory;
 
 public class SearchPage extends BasePage {
 
-  @FindBy(xpath = "//input[@placeholder='470']")
+  @FindBy(xpath = "//input[@placeholder='500']")
   private WebElement inputPriceButton;
 
-  @FindBy(xpath = "//*[@id='153061']/input")
+  @FindBy(xpath = "//label[@id='153061']")
   private WebElement SamsungButton;
 
-  @FindBy(xpath = "//*[@id='153074']/input")
+  @FindBy(xpath = "//*[@id='153074']")
   private WebElement LGButton;
 
   @FindBy(xpath = "//a[@class='_2qvOO _3qN-v _1Rc6L']")
   private WebElement NaidennoeButton;
 
 
-  @FindBy(xpath = "//input[@placeholder='631']")
+  @FindBy(xpath = "//input[@placeholder='60']")
   private WebElement inputEarPriceButton;
 
   @FindBy(xpath = "//*[@id='152794']/input")
@@ -30,7 +30,9 @@ public class SearchPage extends BasePage {
     waitUtilElementToBeClickable(inputPriceButton);
 
     inputPriceButton.sendKeys("20000");
+    waitUtilElementToBeClickable(SamsungButton);
     SamsungButton.click();
+    waitUtilElementToBeClickable(LGButton);
     LGButton.click();
 
     waitUtilElementToBeClickable(NaidennoeButton);
