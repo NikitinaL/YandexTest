@@ -1,5 +1,6 @@
 package ru.ibs.framework.pages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -15,14 +16,14 @@ public class SearchPage extends BasePage {
   @FindBy(xpath = "//*[@id='153074']")
   private WebElement LGButton;
 
-  @FindBy(xpath = "//a[@class='_2qvOO _3qN-v _1Rc6L']")
+  @FindBy(xpath = "//a[contains (text(), 'Показать')]")
   private WebElement NaidennoeButton;
 
 
   @FindBy(xpath = "//input[@placeholder='60']")
   private WebElement inputEarPriceButton;
 
-  @FindBy(xpath = "//*[@id='152794']/input")
+  @FindBy(xpath = "//*[@id='152794']")
   private WebElement JBLButton;
 
   public void ParamSearchTv() {
@@ -30,9 +31,11 @@ public class SearchPage extends BasePage {
     waitUtilElementToBeClickable(inputPriceButton);
 
     inputPriceButton.sendKeys("20000");
-    waitUtilElementToBeClickable(SamsungButton);
+    //waitUtilElementToBeClickable(SamsungButton);
+    ((JavascriptExecutor)driverManager.getDriver()).executeScript("arguments[0].scrollIntoView()",SamsungButton);
     SamsungButton.click();
-    waitUtilElementToBeClickable(LGButton);
+    //waitUtilElementToBeClickable(LGButton);
+    ((JavascriptExecutor)driverManager.getDriver()).executeScript("arguments[0].scrollIntoView()",LGButton);
     LGButton.click();
 
     waitUtilElementToBeClickable(NaidennoeButton);
@@ -44,7 +47,7 @@ public class SearchPage extends BasePage {
 
     waitUtilElementToBeClickable(inputEarPriceButton);
     inputEarPriceButton.sendKeys("5000");
-
+    ((JavascriptExecutor)driverManager.getDriver()).executeScript("arguments[0].scrollIntoView()",JBLButton);
     JBLButton.click();
     waitUtilElementToBeClickable(NaidennoeButton);
     NaidennoeButton.click();

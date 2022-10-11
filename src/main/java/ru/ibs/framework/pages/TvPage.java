@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class TvPage extends BasePage {
 
-  @FindBy(xpath = "//button[@class='_2AMPZ _1N_0H _1ghok']")
+  @FindBy(xpath = "//a[@data-auto='allFiltersButton']")
   private WebElement SearchTvButton;
 
   public void SearchTv() {
