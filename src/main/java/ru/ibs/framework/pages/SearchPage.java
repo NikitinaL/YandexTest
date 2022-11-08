@@ -18,7 +18,7 @@ public class SearchPage extends BasePage {
     searchFilters.click();
   }
 
-  @FindBy(xpath = "//input[@placeholder='0']")
+  @FindBy(xpath = "//input[@placeholder='7307']")
   private WebElement inputPriceButton;
 
   @FindBy(xpath = "//div[@data-tid='177f686 ace6a94']")
@@ -34,7 +34,7 @@ public class SearchPage extends BasePage {
   @FindBy(xpath = "//a[contains (text(), 'Показать')]")
   private WebElement NaidennoeButton;
 
-  @FindBy(xpath = "//input[@placeholder='10']")
+  @FindBy(xpath = "//input[@placeholder='60']")
   private WebElement inputEarPriceButton;
 
 //  @FindBy(xpath = "//*[@id='152794']")

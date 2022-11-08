@@ -11,10 +11,10 @@ public class StartPage extends BasePage {
   @FindBy (xpath = "//*[@id='catalogPopupButton']/span/div/span")
   private WebElement catalogButton;
 
-  @FindBy (xpath = "//ul[@role='tablist' and contains(@data-tid, 'a051d6a8')]")
+  @FindBy (xpath = "//div[@data-apiary-widget-name='@MarketNode/HeaderCatalog']//ul[@role='tablist']/li/a")
   private List<WebElement> baseMenu;
 
-  @FindBy (xpath = "//div[@role='heading' and @aria-level='2' and contains(@data-tid, 'dc1558e0 4225d81f')]")
+  @FindBy (xpath = "//div[@data-apiary-widget-name='@MarketNode/NavigationTree']//ul[@data-autotest-id='subItems']/li")
   private List<WebElement> subMenu;
 
 //  @FindBy(xpath = "/html/body/div[4]/noindex[2]/div/div/div/nav/ul[1]/li[9]/div/div/a")
@@ -33,8 +33,10 @@ public class StartPage extends BasePage {
   public void selectBaseMenuByText (String NameMenu) {
     for (WebElement itemMenu : baseMenu){
       if (itemMenu.getText().contains(NameMenu)){
-        itemMenu.click();
-      } return;
+       // itemMenu.click();
+        action.moveToElement(itemMenu).build().perform();
+        return;
+      }
     }
     Assert.fail("Меню с текстом" + NameMenu + "не найдено на странице");
   }
@@ -43,7 +45,8 @@ public class StartPage extends BasePage {
     for (WebElement itemMenu : subMenu){
       if (itemMenu.getText().contains(NameSubMenu)){
         itemMenu.click();
-      } return;
+        return;
+      }
     }
     Assert.fail("Меню с текстом" + NameSubMenu + "не найдено на странице");
   }
