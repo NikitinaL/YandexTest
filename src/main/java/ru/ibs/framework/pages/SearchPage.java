@@ -21,7 +21,7 @@ public class SearchPage extends BasePage {
   @FindBy(xpath = "//input[@placeholder='7307']")
   private WebElement inputPriceButton;
 
-  @FindBy(xpath = "//div[@data-tid='177f686 ace6a94']")
+  @FindBy(xpath = "//div[@data-filter-id='7893318']/div")
   private List<WebElement> selectCheckbox;
 
 
