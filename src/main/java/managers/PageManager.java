@@ -1,5 +1,6 @@
 package managers;
 
+import ru.ibs.framework.pages.ResultPage;
 import ru.ibs.framework.pages.SearchPage;
 import ru.ibs.framework.pages.StartPage;
 
@@ -10,6 +11,8 @@ public class PageManager {
   private StartPage startPage;
 
   private SearchPage searchPage;
+
+  private ResultPage resultPage;
 
   private PageManager(){
 
@@ -42,6 +45,13 @@ public class PageManager {
       searchPage = new SearchPage();
     }
     return searchPage;
+  }
+
+  public ResultPage getResultPage() {
+    if (resultPage == null) {
+      resultPage = new ResultPage();
+    }
+    return resultPage;
   }
 }
 

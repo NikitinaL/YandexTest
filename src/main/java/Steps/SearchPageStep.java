@@ -7,30 +7,24 @@ public class SearchPageStep {
   PageManager pageManager = PageManager.getPageManager();
 
   @И("Применить расширенный фильтр")
-  public void filter (){
+  public void filter() {
     pageManager.getSearchPage().searchFilters();
   }
 
-  @И("Установить цену ТВ от")
-  public void paramSearchTv(){
-    pageManager.getSearchPage().paramSearchTv();
+  @И("Установить цену от {string}")
+  public void inputPrice(String string) {
+    pageManager.getSearchPage().inputPrice(string);
   }
 
-  @И("Задать параметры поиска ТВ {string}")
-  public void Задать_параметры_поиска_ТВ(String string){
-    pageManager.getSearchPage().selectCheckboxByText(string);
+  @И("Задать параметры поиска ТВ")
+  public void Задать_параметры_поиска_ТВ() {
+    pageManager.getSearchPage().tvParams();
   }
 
-  @И("Установить цену наушников от")
-  public void paramSearchEarPods(){
-    pageManager.getSearchPage().paramSearchEarPods();
+  @И("Задать параметры поиска наушников")
+  public void Задать_параметры_поиска_наушников() {
+    pageManager.getSearchPage().earParams();
   }
-
-  @И("Задать параметры поиска наушников {string}")
-  public void Задать_параметры_поиска_наушников (String string){
-    pageManager.getSearchPage().selectCheckboxByText(string);
-  }
-
 
   @И("Получить результат")
   public void showResult() {
