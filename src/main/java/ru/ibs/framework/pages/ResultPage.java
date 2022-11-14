@@ -18,14 +18,13 @@ public class ResultPage extends BasePage {
     WebElement firstElement = driverManager.getDriver().findElement(By.xpath("(//h3/a)[1]"));
     waitUtilElementToBeClickable(firstElement);
     ((JavascriptExecutor) driverManager.getDriver()).executeScript("arguments[0].scrollIntoView()", firstElement);
-    firstElement.getText();
     String text = firstElement.getText();
     poisktovary.sendKeys(text);
     waitUtilElementToBeClickable(naitFirstElement);
     naitFirstElement.click();
     WebElement firstElement2 = driverManager.getDriver().findElement(By.xpath("(//h3/a)[1]"));
+    waitUtilElementToBeClickable(firstElement2);
     ((JavascriptExecutor) driverManager.getDriver()).executeScript("arguments[0].scrollIntoView()", firstElement2);
-    firstElement2.getText();
     String text2 = firstElement2.getText();
     try {
       Thread.sleep(5000);
