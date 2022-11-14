@@ -1,5 +1,6 @@
 package ru.ibs.framework.pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -31,31 +32,26 @@ public class SearchPage extends BasePage {
     inputPrice.sendKeys(price);
   }
 
-  public void tvParams() {
-    WebElement SamsungButton = driverManager.getDriver().findElement(By.xpath("//label[@id='153061']"));
-    waitUtilElementToBeClickable(SamsungButton);
-    ((JavascriptExecutor) driverManager.getDriver()).executeScript("arguments[0].scrollIntoView()", SamsungButton);
-    SamsungButton.click();
-    WebElement LGButton = driverManager.getDriver().findElement(By.xpath("//*[@id='153074']/div"));
-    waitUtilElementToBeClickable(SamsungButton);
-    ((JavascriptExecutor) driverManager.getDriver()).executeScript("arguments[0].scrollIntoView()", SamsungButton);
-    LGButton.click();
-
-//    for (WebElement itemMenu : selectCheckbox){
-//      if (itemMenu.getText().contains(Name)){
-//        itemMenu.click();
-//        return;
-//      }
-//    }
-//    Assert.fail("Производитель" + selectCheckbox + "не найден на странице");
+  public void selectCheckboxByText (String Name) {
+    for (WebElement itemMenu : selectCheckbox) {
+      if (itemMenu.getText().contains(Name)) {
+        waitUtilElementToBeClickable(itemMenu);
+        ((JavascriptExecutor) driverManager.getDriver()).executeScript("arguments[0].scrollIntoView()", itemMenu);
+        itemMenu.click();
+        return;
+      }
+    }
+    Assert.fail("Меню с текстом" + Name + "не найдено на странице");
   }
+//    WebElement SamsungButton = driverManager.getDriver().findElement(By.xpath("//label[@id='153061']"));
+//    waitUtilElementToBeClickable(SamsungButton);
+//    ((JavascriptExecutor) driverManager.getDriver()).executeScript("arguments[0].scrollIntoView()", SamsungButton);
+//    SamsungButton.click();
+//    WebElement LGButton = driverManager.getDriver().findElement(By.xpath("//*[@id='153074']/div"));
+//    waitUtilElementToBeClickable(SamsungButton);
+//    ((JavascriptExecutor) driverManager.getDriver()).executeScript("arguments[0].scrollIntoView()", SamsungButton);
+//    LGButton.click();
 
-  public void earParams() {
-    WebElement JBLButton = driverManager.getDriver().findElement(By.xpath("//*[@id='152794']"));
-    waitUtilElementToBeClickable(JBLButton);
-    ((JavascriptExecutor) driverManager.getDriver()).executeScript("arguments[0].scrollIntoView()", JBLButton);
-    JBLButton.click();
-  }
 
   public void showResult() {
     waitUtilElementToBeClickable(naidennoeButton);

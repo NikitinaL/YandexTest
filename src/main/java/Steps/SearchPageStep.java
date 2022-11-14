@@ -16,15 +16,11 @@ public class SearchPageStep {
     pageManager.getSearchPage().inputPrice(string);
   }
 
-  @И("Задать параметры поиска ТВ")
-  public void Задать_параметры_поиска_ТВ() {
-    pageManager.getSearchPage().tvParams();
+  @И("Задать параметры поиска производителя {string}")
+  public void Задать_параметры_поиска (String string) {
+    pageManager.getSearchPage().selectCheckboxByText(string);
   }
 
-  @И("Задать параметры поиска наушников")
-  public void Задать_параметры_поиска_наушников() {
-    pageManager.getSearchPage().earParams();
-  }
 
   @И("Получить результат")
   public void showResult() {
